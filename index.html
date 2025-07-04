@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZynoxGenI - Your Partner in Digital Excellence</title>
     <!-- Favicon -->
-    <!-- Using favicon.ico. Ensure this file is in the same directory as your HTML. -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Tailwind CSS CDN -->
@@ -46,14 +45,41 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
+
+        /* Keyframe for fade-in-down animation */
+        @keyframes fade-in-down {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Keyframe for fade-in-up animation */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-down {
+            animation: fade-in-down 1s ease-out forwards;
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 1s ease-out forwards;
+        }
     </style>
 </head>
 <body class="text-gray-800">
 
-    <!-- Header -->
     <header class="bg-white shadow-md py-4 px-6 sticky top-0 z-50">
         <nav class="container mx-auto flex justify-between items-center">
-            <!-- Logo with text -->
             <a href="#" class="flex items-center space-x-2 text-indigo-700 hover:text-indigo-800 transition duration-300 rounded-lg p-2">
                 <img src="zynoxgeni.png" alt="ZynoxGenI Logo" class="h-10 md:h-12 w-auto">
                 <span class="text-3xl font-bold">ZynoxGenI</span>
@@ -65,14 +91,12 @@
                 <li><a href="#about" class="text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 rounded-md px-3 py-2">About Us</a></li>
                 <li><a href="#contact" class="text-lg font-medium text-gray-700 hover:text-indigo-600 transition duration-300 rounded-md px-3 py-2">Contact</a></li>
             </ul>
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-indigo-600 focus:outline-none">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
         </nav>
-        <!-- Mobile Menu Overlay -->
         <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-gray-900 bg-opacity-90 z-50 flex flex-col items-center justify-center">
             <button id="close-mobile-menu" class="absolute top-6 right-6 text-white hover:text-gray-300 focus:outline-none">
                 <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -90,10 +114,8 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section id="home" class="relative bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20 md:py-32 overflow-hidden">
             <div class="absolute inset-0 z-0 opacity-10">
-                <!-- Background pattern or subtle animation -->
                 <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
                     <defs>
                         <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -108,7 +130,7 @@
                     ZynoxGenI: Crafting Digital Excellence for Your Business
                 </h1>
                 <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90 animate-fade-in-up">
-                    As a top company, we specialize in generating high-quality websites and providing seamless management solutions, empowering businesses to thrive in the digital landscape.
+                    As a top company, we specialize in generating high-quality websites and providing seamless management solutions, empowering businesses to thrive in the digital landscape. Let's build your online future together.
                 </p>
                 <a href="#contact" class="bg-white text-indigo-700 hover:bg-indigo-100 hover:text-indigo-800 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out inline-block">
                     Get a Free Consultation
@@ -116,32 +138,28 @@
             </div>
         </section>
 
-        <!-- Services Section -->
         <section id="services" class="py-16 md:py-24 bg-gray-50">
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl font-bold text-center mb-12 section-heading mx-auto w-fit">Our Services</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service Card 1 -->
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
                         <div class="text-indigo-600 mb-4">
                             <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9.75 14M22 10V6M10 17H5M17 21H10M17 17H10M17 14H10M17 10H10M17 6H10M17 3H10M17 21V3M17 21H22M17 3H22M17 10V6M17 6H22M17 14V10M17 14H22M17 17V14M17 17H22M17 21V17M17 21H22M17 10H5M17 6H5M17 3H5M17 21H5M17 17H5M17 14H5"></path></svg>
                         </div>
                         <h3 class="text-2xl font-semibold text-center mb-4">Custom Website Generation</h3>
                         <p class="text-gray-600 text-center">
-                            We design and develop bespoke websites tailored to your unique business needs, ensuring a strong online presence and user experience.
+                            We design and develop bespoke websites tailored to your unique business needs, ensuring a strong online presence and optimal user experience.
                         </p>
                     </div>
-                    <!-- Service Card 2 -->
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
                         <div class="text-indigo-600 mb-4">
                             <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                         </div>
                         <h3 class="text-2xl font-semibold text-center mb-4">Website Management & Maintenance</h3>
                         <p class="text-gray-600 text-center">
-                            We provide comprehensive management, updates, security, and performance optimization to keep your website running smoothly.
+                            We provide comprehensive management, updates, security, and performance optimization to keep your website running smoothly and securely.
                         </p>
                     </div>
-                    <!-- Service Card 3 -->
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
                         <div class="text-indigo-600 mb-4">
                             <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
@@ -151,17 +169,15 @@
                             Boost your online visibility and reach your target audience with our expert search engine optimization and digital marketing strategies.
                         </p>
                     </div>
-                    <!-- Service Card 4 -->
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
                         <div class="text-indigo-600 mb-4">
                             <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM12 21c-1.657 0-3-.895-3-2s1.343-2 3-2 3 .895 3 2-1.343 2-3 2zM12 3c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM12 15c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2z"></path></svg>
                         </div>
                         <h3 class="text-2xl font-semibold text-center mb-4">E-commerce Solutions</h3>
                         <p class="text-gray-600 text-center">
-                            From online stores to payment gateway integrations, we build secure and scalable e-commerce platforms for your business.
+                            From online stores to secure payment gateway integrations, we build robust and scalable e-commerce platforms for your business.
                         </p>
                     </div>
-                    <!-- Service Card 5 -->
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
                         <div class="text-indigo-600 mb-4">
                             <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3m0 0l3-3m-3 3v4m0 0a9 9 0 110-18 9 9 0 010 18z"></path></svg>
@@ -171,7 +187,6 @@
                             Engage your audience with compelling content. We help you develop effective content strategies and create impactful copy.
                         </p>
                     </div>
-                    <!-- Service Card 6 -->
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
                         <div class="text-indigo-600 mb-4">
                             <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
@@ -185,12 +200,10 @@
             </div>
         </section>
 
-        <!-- Why Choose Us Section -->
         <section class="py-16 md:py-24 bg-indigo-700 text-white">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-4xl font-bold mb-12 section-heading mx-auto w-fit text-white">Why Choose ZynoxGenI?</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Feature 1 -->
                     <div class="bg-indigo-800 p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
                         <div class="text-indigo-200 mb-4">
                             <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -200,7 +213,6 @@
                             We pride ourselves on delivering top-tier websites and digital solutions that exceed expectations in design, functionality, and performance.
                         </p>
                     </div>
-                    <!-- Feature 2 -->
                     <div class="bg-indigo-800 p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
                         <div class="text-indigo-200 mb-4">
                             <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
@@ -210,62 +222,64 @@
                             Your success is our priority. We offer dedicated support and clear communication throughout our partnership, ensuring your needs are met.
                         </p>
                     </div>
-                    <!-- Feature 3 -->
                     <div class="bg-indigo-800 p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
                         <div class="text-indigo-200 mb-4">
                             <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         </div>
                         <h3 class="text-2xl font-semibold mb-4">Seamless Business Management</h3>
                         <p class="text-indigo-200">
-                            We empower businesses with intuitive website management tools and support, allowing you to focus on your core operations.
+                            We empower businesses with intuitive website management tools and support, allowing you to focus on your core operations and growth.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Portfolio Section (Placeholder) -->
         <section id="portfolio" class="py-16 md:py-24 bg-gray-50">
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl font-bold text-center mb-12 section-heading mx-auto w-fit">Our Recent Work</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project Card 1 -->
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                        <img src="https://placehold.co/600x400/E0E7FF/4338CA?text=Project+1" alt="Project 1" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/600x400/E0E7FF/4338CA?text=E-commerce+Redesign" alt="E-commerce Redesign Project" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">E-commerce Redesign</h3>
                             <p class="text-gray-600 text-sm">A modern, responsive e-commerce platform for a fashion brand, focusing on user experience and conversion.</p>
                             <a href="#" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium mt-4 inline-block">View Project &rarr;</a>
                         </div>
                     </div>
-                    <!-- Project Card 2 -->
                     <div class="bg-white p-8 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                        <img src="https://placehold.co/600x400/E0E7FF/4338CA?text=Project+2" alt="Project 2" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/600x400/E0E7FF/4338CA?text=Corporate+Website" alt="Corporate Website Development Project" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">Corporate Website Development</h3>
-                            <p class="text-gray-600 text-sm">Developed a professional corporate website with integrated CRM for a B2B service provider.</p>
+                            <p class="text-gray-600 text-sm">Developed a professional corporate website with integrated features for a B2B service provider.</p>
                             <a href="#" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium mt-4 inline-block">View Project &rarr;</a>
                         </div>
                     </div>
-                    <!-- Project Card 3 -->
                     <div class="bg-white p-8 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                        <img src="https://placehold.co/600x400/E0E7FF/4338CA?text=Project+3" alt="Project 3" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/600x400/E0E7FF/4338CA?text=Travel+Exp.+Calc" alt="Travel Expenditure Calculator Project" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2">SaaS Product Landing Page</h3>
-                            <p class="text-gray-600 text-sm">Designed and launched a high-converting landing page for a new SaaS product, driving sign-ups.</p>
-                            <a href="#" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium mt-4 inline-block">View Project &rarr;</a>
+                            <h3 class="text-xl font-semibold mb-2">Travel Expenditure Calculator</h3>
+                            <p class="text-gray-600 text-sm">A handy tool to calculate and manage travel expenses efficiently. (See on GitHub)</p>
+                            <a href="https://github.com/AnirudhZalki/travelexpenditure" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium mt-4 inline-block">View Project &rarr;</a>
+                        </div>
+                    </div>
+                     <div class="bg-white p-8 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                        <img src="https://placehold.co/600x400/E0E7FF/4338CA?text=E-commerce+Site" alt="E-commerce Website Project" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Modern E-commerce Site</h3>
+                            <p class="text-gray-600 text-sm">A fully functional e-commerce platform showcasing modern web development practices.</p>
+                            <a href="https://anirudhzalki.github.io/ecommerce/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium mt-4 inline-block">View Project &rarr;</a>
                         </div>
                     </div>
                 </div>
                 <div class="text-center mt-12">
-                    <a href="#" class="bg-indigo-600 text-white hover:bg-indigo-700 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out inline-block">
-                        View All Projects
+                    <a href="#contact" class="bg-indigo-600 text-white hover:bg-indigo-700 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out inline-block">
+                        Ready to Start Your Project?
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- About Us Section -->
         <section id="about" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
@@ -274,19 +288,18 @@
                 <div class="md:w-1/2 text-center md:text-left">
                     <h2 class="text-4xl font-bold mb-6 section-heading md:mx-0 mx-auto w-fit">About ZynoxGenI</h2>
                     <p class="text-lg text-gray-600 mb-4">
-                        ZynoxGenI was founded with a clear vision: to empower businesses of all sizes with exceptional digital presence and seamless online operations. We believe in the transformative power of a well-crafted website and the efficiency of expert management.
+                        ZynoxGenI was founded with a clear vision: to empower businesses of all sizes with an exceptional digital presence and seamless online operations. We believe in the transformative power of a well-crafted website and the efficiency of expert management.
                     </p>
                     <p class="text-lg text-gray-600 mb-4">
                         Our team of dedicated professionals combines creativity with technical expertise to deliver solutions that are not just visually appealing but also highly functional, secure, and scalable. We are committed to quality, innovation, and providing unparalleled service to our clients.
                     </p>
                     <p class="text-lg text-gray-600">
-                        Join the growing number of businesses that trust ZynoxGenI to elevate their digital footprint and achieve your online goals.
+                        Join the growing number of businesses that trust ZynoxGenI to elevate their digital footprint and achieve their online goals. Let's build something amazing together!
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="py-16 md:py-24 bg-gray-50">
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl font-bold text-center mb-12 section-heading mx-auto w-fit">Get in Touch</h2>
@@ -324,7 +337,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-10">
         <div class="container mx-auto px-6 text-center md:flex md:justify-between md:items-center">
             <p class="mb-4 md:mb-0">&copy; 2025 ZynoxGenI. All rights reserved. | Email: <a href="mailto:zynoxgeni.official@gmail.com" class="text-indigo-400 hover:underline">zynoxgeni.official@gmail.com</a></p>
