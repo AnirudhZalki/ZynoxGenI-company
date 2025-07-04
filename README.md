@@ -47,6 +47,6 @@ This repository is licensed under the MIT License. See the LICENSE file for more
 
 📸 Instagram: @zynoxgeni (if available)
 
-💼 LinkedIn: Coming Soon
+💼 LinkedIn: https://www.linkedin.com/company/zynoxgeni/about/?viewAsMember=true
 
 Building clean, functional, and beautiful digital spaces – one project at a time. 🚀
