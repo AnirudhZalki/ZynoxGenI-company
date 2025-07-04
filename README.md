@@ -32,19 +32,6 @@ Tools: Git, GitHub, VS Code
 🌟 Live Website
 🔗 Visit us at: www.zynoxgeni.in (replace with actual URL if different)
 
-📁 Project Structure
-arduino
-Copy
-Edit
-zynoxgeni/
-├── public/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── App.js
-├── package.json
-├── tailwind.config.js
-└── README.md
 👥 Contributing
 Interested in contributing or collaborating? We're open to ideas, partnerships, and internship inquiries!
 
