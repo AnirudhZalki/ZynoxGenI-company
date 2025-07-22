@@ -431,5 +431,28 @@
             }
         });
     </script>
+    <!-- Chatbot iframe -->
+    <iframe id="chat-frame"
+            src="https://demo.chat-sdk.dev/"
+            class="fixed bottom-24 right-6 w-80 h-[600px] border-none rounded-xl shadow-lg hidden z-50">
+    </iframe>
+    
+    <!-- Chat toggle button -->
+    <button id="chat-toggle"
+            class="fixed bottom-6 right-6 w-14 h-14 bg-indigo-600 text-white rounded-full shadow-xl hover:bg-indigo-700 transition-colors z-50 flex items-center justify-center text-2xl">
+      💬
+    </button>
+
+    <script>
+          const toggleBtn = document.getElementById('chat-toggle');
+          const chatFrame = document.getElementById('chat-frame');
+        
+          toggleBtn.addEventListener('click', () => {
+            const isHidden = chatFrame.classList.contains('hidden');
+            chatFrame.classList.toggle('hidden', !isHidden);
+          });
+    </script>
+
+
 </body>
 </html>
