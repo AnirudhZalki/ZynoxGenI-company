@@ -430,6 +430,11 @@
                 formMessage.classList.remove('hidden');
             }
         });
+        function initApollo(){
+            var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+            o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+            o.onload=function(){window.trackingFunctions.onLoad({appId:"68f13e68a4b302000d0c637d"})},
+            document.head.appendChild(o)}initApollo();
     </script>
   <co-pilot user-id="6dfd678b-9b4f-403a-a797-de431a11b36d" chatbot-id="3378dfe2-5ecc-4b4f-9da2-0dd2eaacacec" platform-id="85a699f2-21ce-45c1-85a0-25f8c4bd2fc2" is-local="false"><a href="https://www.chatsimple.ai/?utm_source=widget&utm_medium=referral"></a></co-pilot> <script src="https://cdn.chatsimple.ai/ai-loader.js" defer></script>
 
