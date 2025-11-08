@@ -336,6 +336,15 @@
             </div>
         </section>
     </main>
+    
+    <div id="zynoxgeni-chatbot" style="position: fixed; bottom: 20px; right: 20px; width: 320px; background: #1a1a1a; color: #fff; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.3); font-family: sans-serif; overflow: hidden;">
+      <div style="background: #0d6efd; padding: 10px; font-weight: bold; text-align: center;">💬 Zynoxgeni AI Assistant</div>
+      <div id="chat-window" style="padding: 10px; height: 300px; overflow-y: auto; font-size: 14px;"></div>
+      <div style="display: flex; border-top: 1px solid #444;">
+        <input id="chat-input" type="text" placeholder="Ask me anything..." style="flex: 1; padding: 8px; border: none; outline: none; background: #222; color: #fff;">
+        <button onclick="sendMsg()" style="background: #0d6efd; color: #fff; border: none; padding: 8px 12px; cursor: pointer;">Send</button>
+      </div>
+    </div>
 
     <footer class="bg-gray-800 text-white py-10">
         <div class="container mx-auto px-6 text-center md:flex md:justify-between md:items-center">
@@ -436,6 +445,40 @@
             o.onload=function(){window.trackingFunctions.onLoad({appId:"68f13e68a4b302000d0c637d"})},
             document.head.appendChild(o)}initApollo();
     </script>
+
+    <script>
+        async function sendMsg() {
+          const input = document.getElementById("chat-input");
+          const chatWindow = document.getElementById("chat-window");
+          const userMsg = input.value.trim();
+          if (!userMsg) return;
+    
+          // Show user message
+          chatWindow.innerHTML += `<div style="margin-bottom:10px;"><b>You:</b> ${userMsg}</div>`;
+          input.value = "";
+          chatWindow.scrollTop = chatWindow.scrollHeight;
+        
+          try {
+            const res = await fetch("https://zalkianirudh.app.n8n.cloud/webhook-test/zynoxgeni-chatbot", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ message: userMsg })
+            });
+        
+            const data = await res.json();
+            const aiReply = data.reply || "Sorry, I couldn't find an answer right now.";
+        
+            // Show AI response
+            chatWindow.innerHTML += `<div style="margin-bottom:10px; color:#00d084;"><b>Zynoxgeni:</b> ${aiReply}</div>`;
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        
+          } catch (err) {
+            console.error(err);
+            chatWindow.innerHTML += `<div style="color:red;">Error: Unable to reach AI server.</div>`;
+          }
+        }
+    </script>
+
   <co-pilot user-id="6dfd678b-9b4f-403a-a797-de431a11b36d" chatbot-id="3378dfe2-5ecc-4b4f-9da2-0dd2eaacacec" platform-id="85a699f2-21ce-45c1-85a0-25f8c4bd2fc2" is-local="false"><a href="https://www.chatsimple.ai/?utm_source=widget&utm_medium=referral"></a></co-pilot> <script src="https://cdn.chatsimple.ai/ai-loader.js" defer></script>
 
 </body>
