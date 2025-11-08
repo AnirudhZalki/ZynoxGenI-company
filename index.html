@@ -459,7 +459,7 @@
           chatWindow.scrollTop = chatWindow.scrollHeight;
         
           try {
-            const res = await fetch("https://zalkianirudh.app.n8n.cloud/webhook-test/zynoxgeni-chatbot", {
+            const res = await fetch("https://zalkianirudh.app.n8n.cloud/webhook/zynoxgeni-chatbot", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({ message: userMsg })
