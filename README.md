@@ -30,12 +30,12 @@ Deployment: GitHub Pages, Vercel, Netlify
 Tools: Git, GitHub, VS Code
 
 🌟 Live Website
-🔗 Visit us at: www.zynoxgeni.in (replace with actual URL if different)
+🔗 Visit us at: www.zynoxgeni.com (replace with actual URL if different)
 
 👥 Contributing
 Interested in contributing or collaborating? We're open to ideas, partnerships, and internship inquiries!
 
-📨 Email us at: zynoxgeni.official@gmail.com
+📨 Email us at: info@zynoxgeni.com
 
 📜 License
 This repository is licensed under the MIT License. See the LICENSE file for more details.
@@ -43,7 +43,7 @@ This repository is licensed under the MIT License. See the LICENSE file for more
 🔗 Connect With Us
 📧 Email: zynoxgeni.official@gmail.com
 
-🌐 Website: www.zynoxgeni.in
+🌐 Website: www.zynoxgeni.com
 
 📸 Instagram: @zynoxgeni (if available)
 
